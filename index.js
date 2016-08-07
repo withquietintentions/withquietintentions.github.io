@@ -7,16 +7,16 @@ var spiritAncestors = [
 var minerals = [
   "Gold - Au.",
   "Silver - Ag.",
-  "Tin - Sn.", 
+  "Tin - Sn.",
   "Aluminum - Al.",
   "Silicon - Si.",
   "Copper - Cu."
 ];
 
 var historyOfComputing = [
-  "ENIAC built between 1943 and 1945 - the first large scale computer to run at electronic speed without being slowed by any mechanical parts.", 
-  "The abacus is an instrument from the 14th century for performing calculations by sliding counters along rods or in grooves.", 
-  "1804 - the Jaquard loom is a loom programed with punchcards." 
+  "ENIAC built between 1943 and 1945 - the first large scale computer to run at electronic speed without being slowed by any mechanical parts.",
+  "The abacus is an instrument from the 14th century for performing calculations by sliding counters along rods or in grooves.",
+  "1804 - the Jaquard loom is a loom programed with punchcards."
 ];
 
 var shamanicInformation = [
@@ -27,7 +27,7 @@ var encounters = {
   spiritAncestors: spiritAncestors,
   minerals: minerals,
   historyOfComputing: historyOfComputing,
-  shamanicInformation: shamanicInformation  
+  shamanicInformation: shamanicInformation
 };
 
 const NUMBER_OF_SENTENCES = 3;
