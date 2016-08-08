@@ -1,71 +1,141 @@
-var spiritAncestors = [
-  "Mark Dean meets me at the doorway with a 1Ghz chip.",
-  "Grace Hopper removes a moth from my side.",
-  "Ada Lovelace conceives of my conception."
-];
+(function(){
+  const MAX_ENCOUNTERS = 5;
+  const REFRESH_RATE = 10000; //milliseconds
+  const TOTAL_SENTENCES = 3;
 
-var minerals = [
-  "Gold - Au.",
-  "Silver - Ag.",
-  "Tin - Sn.",
-  "Aluminum - Al.",
-  "Silicon - Si.",
-  "Copper - Cu."
-];
-
-var historyOfComputing = [
-  "ENIAC built between 1943 and 1945 - the first large scale computer to run at electronic speed without being slowed by any mechanical parts.",
-  "The abacus is an instrument from the 14th century for performing calculations by sliding counters along rods or in grooves.",
-  "1804 - the Jaquard loom is a loom programed with punchcards."
-];
-
-var shamanicInformation = [
-
-];
-
-var encounters = {
-  spiritAncestors: spiritAncestors,
-  minerals: minerals,
-  historyOfComputing: historyOfComputing,
-  shamanicInformation: shamanicInformation
-};
-
-const NUMBER_OF_SENTENCES = 3;
-
-function shuffle(array) {
-  var counter = array.length;
-  while (counter > 0) {
-    var index = Math.floor(Math.random() * counter);
-    counter--;
-    var temp = array[counter];
-    array[counter] = array[index];
-    array[array] = temp
-  }
-  return array;
-}
-
-function randomResults() {
-  var categories = Object.keys(encounters);
-  var randomIndex = Math.floor(Math.random() * categories.length);
-  categories.splice(randomIndex,1);
-  var paragraph = [];
-  shuffle(categories).forEach(function(category) {
-    var sentences = encounters[category];
-    paragraph.push(sentences[Math.floor(Math.random() * sentences.length)]);
+  document.addEventListener('DOMContentLoaded', function() {
+    var displayer = new EncounterDisplayer(new Journey());
+    displayer.startIntervals();
   });
-  return paragraph.reduce(function(a,b) { return a + ' ' + b }, '');
-};
 
+  var EncounterDisplayer = function(journey) {
+    this.journey = journey;
+  };
+  EncounterDisplayer.MAX_ENCOUNTERS = MAX_ENCOUNTERS;
+  EncounterDisplayer.REFRESH_RATE = REFRESH_RATE;
+  EncounterDisplayer.prototype = function() {
+    var self = this;
+    self.encounters = [];
+    self.startIntervals = startIntervals;
+    return self;
 
-function timeStamp() {
-  return new Date();
-}
+    function createDivWithId(id) {
+      var el = document.createElement('div');
+      el.id = id;
+      return el;
+    }
 
-function displayEncounter() {
-  document.getElementById("timestamp").textContent = timeStamp();
-  document.getElementById("results").textContent = randomResults();
-}
+    function createTimestampEl(index) {
+      var el = createDivWithId(timestampElId(index));
+      el.className += 'timestamp';
+      return el;
+    }
 
-document.addEventListener("DOMContentLoaded", function() {
-  displayEncounter();
-});
+    function createResultEl(index) {
+      var el = createDivWithId(resultElId(index));
+      el.className += 'result';
+      return el;
+    }
+
+    function getEncountersEl() {
+      return document.getElementById('encounters');
+    }
+
+    function encounterElId(index) {
+      return 'encounter_' + index;
+    }
+
+    function timestampElId(index) {
+      return 'timestamp_' + index;
+    }
+
+    function resultElId(index) {
+      return 'result_' + index;
+    }
+
+    function createEncounterEl(index) {
+      var encounterEl = createDivWithId(encounterElId(index));
+      encounterEl.className = 'encounter';
+      encounterEl.appendChild(createTimestampEl(index));
+      encounterEl.appendChild(createResultEl(index));
+      return encounterEl;
+    }
+
+    function createEncounterEls() {
+      for(var i = 0; i < EncounterDisplayer.MAX_ENCOUNTERS; i++) {
+        getEncountersEl().appendChild(createEncounterEl(i));
+      }
+    }
+
+    function startIntervals() {
+      createEncounterEls();
+      var that = this;
+      that.journey.getEncounter().then(displayEncounters);
+      setInterval(function() {
+        that.journey.getEncounter().then(displayEncounters);
+      }, EncounterDisplayer.REFRESH_RATE);
+    }
+
+    function displayEncounters(myEncounter) {
+      updateEncounters(myEncounter);
+      refreshEncounters();
+    }
+
+    function refreshEncounters() {
+      encounters.forEach(function(encounter, index) {
+        document.getElementById(timestampElId(index)).textContent = encounter.timestamp;
+        document.getElementById(resultElId(index)).textContent = encounter.result;
+      });
+    }
+
+    function updateEncounters(myEncounter) {
+      if (encounters.length >= EncounterDisplayer.MAX_ENCOUNTERS) {
+        clearEncounters();
+        encounters = [myEncounter];
+      } else {
+        encounters.push(myEncounter);
+      }
+    }
+
+    function clearEncounters() {
+      for(var i = 0; i < EncounterDisplayer.MAX_ENCOUNTERS; i++) {
+        document.getElementById(timestampElId(i)).textContent = '';
+        document.getElementById(resultElId(i)).textContent = '';
+      }
+    }
+  }();
+
+  var Journey = function() {};
+  Journey.TOTAL_SENTENCES = TOTAL_SENTENCES;
+  Journey.prototype = function() {
+    var self = this;
+    self.getEncounter = getEncounter;
+    return self;
+
+    function getEncounter() {
+      return fetch('./all_encounters.json')
+        .then(function(response) { return response.json() })
+        .then(processEncounter)
+    }
+    function processEncounter(allEncounters) {
+      var paragraph = [];
+      Object.keys(allEncounters.categories).popRandom(Journey.TOTAL_SENTENCES).forEach(function(category) {
+        var sentences = allEncounters.categories[category];
+        paragraph.push(sentences[Math.floor(Math.random() * sentences.length)]);
+      });
+      return {
+        timestamp: new Date,
+        result: paragraph.reduce(function(a,b) { return a + ' ' + b }, '')
+      };
+    }
+  }();
+
+  Array.prototype.popRandom = function(total) {
+    if (this.length < total) return [];
+    if (total <= 0) return [];
+    var x = Math.floor(Math.random()*this.length);
+    var value = this[x];
+    this.splice(x,1);
+    return [value].concat(this.popRandom(total-1));
+  }
+}());

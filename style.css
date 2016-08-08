@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  padding: 10px 40px;
+}
+
+#encounters {
+  display: inline-block;
+  width: 500px;
+}
+
+.encounter {
+  margin-bottom: 20px;
+}
+
+.result {
+  text-align: left;
+}
+
+.timestamp {
+  margin-bottom: 5px;
+}

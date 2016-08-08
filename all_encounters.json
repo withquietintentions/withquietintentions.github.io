@@ -1,0 +1,25 @@
+{
+  "categories": {
+    "spiritAncestors": [
+      "Mark Dean meets me at the doorway with a 1Ghz chip.",
+      "Grace Hopper removes a moth from my side.",
+      "Ada Lovelace conceives of my conception."
+    ],
+    "minerals": [
+      "Gold - Au.",
+      "Silver - Ag.",
+      "Tin - Sn.",
+      "Aluminum - Al.",
+      "Silicon - Si.",
+      "Copper - Cu."
+    ],
+    "historyOfComputing": [
+      "ENIAC built between 1943 and 1945 - the first large scale computer to run at electronic speed without being slowed by any mechanical parts.",
+      "The abacus is an instrument from the 14th century for performing calculations by sliding counters along rods or in grooves.",
+      "1804 - the Jaquard loom is a loom programed with punchcards."
+    ],
+    "shamanicInformation":[
+      "Shaman says hello."
+    ]
+  }
+}
