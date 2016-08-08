@@ -1,6 +1,6 @@
 (function(){
   const MAX_ENCOUNTERS = 5;
-  const REFRESH_RATE = 10000; //milliseconds
+  const REFRESH_RATE = 30000; //milliseconds
   const TOTAL_SENTENCES = 3;
 
   document.addEventListener('DOMContentLoaded', function() {
