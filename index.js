@@ -113,10 +113,19 @@
     return self;
 
     function getEncounter() {
-      return fetch('./all_encounters.json')
-        .then(function(response) { return response.json() })
-        .then(processEncounter)
+      return new Promise(function(resolve) {
+        var xmlhttp = new XMLHttpRequest();
+        var url = './all_encounters.json';
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            resolve(processEncounter(JSON.parse(xmlhttp.responseText)));
+          }
+        };
+        xmlhttp.open('GET', url, true);
+        xmlhttp.send();
+      });
     }
+
     function processEncounter(allEncounters) {
       var paragraph = [];
       Object.keys(allEncounters.categories).popRandom(Journey.TOTAL_SENTENCES).forEach(function(category) {
