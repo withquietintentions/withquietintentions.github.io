@@ -1,7 +1,7 @@
 (function(){
   const MAX_ENCOUNTERS = 5;
   const REFRESH_RATE = 30000; //milliseconds
-  const TOTAL_SENTENCES = 3;
+  const TOTAL_SENTENCES = 4;
 
   document.addEventListener('DOMContentLoaded', function() {
     var displayer = new EncounterDisplayer(new Journey());
