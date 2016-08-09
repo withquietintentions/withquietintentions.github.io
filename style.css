@@ -2,6 +2,24 @@ body {
   text-align: center;
   padding: 10px 40px;
 }
+h1 {
+	font-family: 'FuturaW01-MediumCondens';
+	margin: 0px;
+	padding: 0;
+	line-height: 1em;
+	font-size: 72px;
+	font-weight: normal;
+	color: #414330;
+}
+h2 {
+	font-family: 'FuturaW01-MediumCondens';
+	margin: 0px;
+	padding: 0;
+	line-height: 1em;
+	font-size: 60px;
+	font-weight: normal;
+	color: #885f39;
+}
 
 #encounters {
   display: inline-block;
