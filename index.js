@@ -21,7 +21,7 @@ EncounterDisplayer.prototype = function() {
   }
 
   function displayEncounters(myEncounter) {
-    if (encountersEl().getElementsByClassName('encounter').length == EncounterDisplayer.MAX_ENCOUNTERS) {
+    if (encountersEl().children.length == EncounterDisplayer.MAX_ENCOUNTERS) {
       removeEncounterEls(EncounterDisplayer.MAX_ENCOUNTERS);
     }
     var tmpl = document.getElementById('encounter-template').content.cloneNode(true);
