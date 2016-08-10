@@ -7,9 +7,21 @@
         crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <script type="text/javascript" src="./index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var displayer = new EncounterDisplayer(new Journey());
+      displayer.startIntervals();
+    });
+  </script>
 </head>
 <body>
   <h2>Computer Journey Results</h2>
   <div id="encounters"></div>
 </body>
+<template id="encounter-template">
+  <div class="encounter">
+    <div class="timestamp"></div>
+    <div class="result"></div>
+  </div>
+</template>
 </html>
