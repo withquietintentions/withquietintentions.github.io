@@ -41,6 +41,11 @@ EncounterDisplayer.prototype = function() {
   }
  }();
 
+var Encounter = function(timestamp, result) {
+  this.timestamp = timestamp;
+  this.result = result;
+};
+
 var Journey = function() {};
 Journey.TOTAL_SENTENCES = TOTAL_SENTENCES;
 Journey.prototype = function() {
@@ -68,10 +73,7 @@ Journey.prototype = function() {
       var sentences = allEncounters.categories[category];
       paragraph.push(sentences[Math.floor(Math.random() * sentences.length)]);
     });
-    return {
-      timestamp: new Date,
-      result: paragraph.reduce(function(a,b) { return a + ' ' + b }, '')
-    };
+    return new Encounter(new Date(), paragraph.reduce(function(a,b) { return a + ' ' + b }, ''));
   }
 }();
 
