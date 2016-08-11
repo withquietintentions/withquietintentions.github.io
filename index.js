@@ -1,6 +1,7 @@
 const MAX_ENCOUNTERS = 5;
 const REFRESH_RATE = 30000; //milliseconds
 const TOTAL_SENTENCES = 4;
+const FADE_TIME = 2000;
 
 var EncounterDisplayer = function(journey) {
   this.journey = journey;
@@ -21,13 +22,16 @@ EncounterDisplayer.prototype = function() {
   }
 
   function displayEncounters(myEncounter) {
-    if (encountersEl().children.length == EncounterDisplayer.MAX_ENCOUNTERS) {
-      removeEncounterEls(EncounterDisplayer.MAX_ENCOUNTERS);
-    }
     var tmpl = document.getElementById('encounter-template').content.cloneNode(true);
     tmpl.querySelector('.timestamp').innerText = myEncounter.timestamp;
     tmpl.querySelector('.result').innerText = myEncounter.result;
-    encountersEl().appendChild(tmpl);
+    if (encountersEl().children.length == EncounterDisplayer.MAX_ENCOUNTERS) {
+      removeEncounterEls(EncounterDisplayer.MAX_ENCOUNTERS).then(function() {
+        encountersEl().appendChild(tmpl);
+      });
+    } else {
+      encountersEl().appendChild(tmpl);
+    }
   }
 
   function encountersEl() {
@@ -35,11 +39,20 @@ EncounterDisplayer.prototype = function() {
   }
 
   function removeEncounterEls(number) {
+    var promises = [];
     for (var i = 0; i < number; i++) {
-      encountersEl().children[0].remove();
+      var p = new Promise(function(resolve) {
+        encountersEl().children[i].className += ' fade-out';
+        setTimeout(function() {
+          encountersEl().children[0].remove();
+          resolve();
+        }, FADE_TIME);
+      });
+      promises.push(p);
     }
+    return Promise.all(promises);
   }
- }();
+}();
 
 var Encounter = function(timestamp, result) {
   this.timestamp = timestamp;
