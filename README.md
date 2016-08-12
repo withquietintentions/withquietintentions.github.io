@@ -1,3 +1,3 @@
-# Journey Results
+# Journey
 
-Computer goes on shamanic journey.
+Interactive art project.
