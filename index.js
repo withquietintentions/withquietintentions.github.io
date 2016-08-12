@@ -8,6 +8,7 @@ var EncounterDisplayer = function(journey) {
 };
 EncounterDisplayer.MAX_ENCOUNTERS = MAX_ENCOUNTERS;
 EncounterDisplayer.REFRESH_RATE = REFRESH_RATE;
+EncounterDisplayer.FADE_TIME = FADE_TIME;
 EncounterDisplayer.prototype = function() {
   var self = this;
   self.startIntervals = startIntervals;
@@ -46,7 +47,7 @@ EncounterDisplayer.prototype = function() {
         setTimeout(function() {
           encountersEl().children[0].remove();
           resolve();
-        }, FADE_TIME);
+        }, EncounterDisplayer.FADE_TIME);
       });
       promises.push(p);
     }
