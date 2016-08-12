@@ -39,7 +39,9 @@ h2 {
 }
 
 .timestamp {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #808080;
 }
 
 .fade-in {
