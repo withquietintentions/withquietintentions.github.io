@@ -3,93 +3,133 @@ const REFRESH_RATE = 30000; //milliseconds
 const TOTAL_SENTENCES = 4;
 const FADE_TIME = 2000;
 
-var EncounterDisplayer = function(journey) {
+function EncounterDisplayer(journey) {
   this.journey = journey;
 };
 EncounterDisplayer.MAX_ENCOUNTERS = MAX_ENCOUNTERS;
 EncounterDisplayer.REFRESH_RATE = REFRESH_RATE;
 EncounterDisplayer.FADE_TIME = FADE_TIME;
-EncounterDisplayer.prototype = function() {
+EncounterDisplayer.prototype.startIntervals = function() {
   var self = this;
-  self.startIntervals = startIntervals;
-  return self;
+  self.journey.start().then(loop);
 
-  function startIntervals() {
-    var that = this;
-    that.journey.getEncounter().then(displayEncounters);
-    setInterval(function() {
-      that.journey.getEncounter().then(displayEncounters);
-    }, EncounterDisplayer.REFRESH_RATE);
+  function loop() {
+    cycle().then(loop);
   }
 
-  function displayEncounters(myEncounter) {
-    var tmpl = document.getElementById('encounter-template').content.cloneNode(true);
-    tmpl.querySelector('.timestamp').innerText = myEncounter.timestamp;
-    tmpl.querySelector('.result').innerText = myEncounter.result;
-    if (encountersEl().children.length == EncounterDisplayer.MAX_ENCOUNTERS) {
-      removeEncounterEls(EncounterDisplayer.MAX_ENCOUNTERS).then(function() {
-        encountersEl().appendChild(tmpl);
+  function cycle() {
+    return new Promise(function(resolve) {
+      self.journey.setActiveEncounters().then(function() {
+        Promise.all(buildEncounterPromises()).then(function() {
+          fadeoutEncounterEls().then(function() {
+            removeEncounterEls();
+            resolve();
+          });
+        });
       });
-    } else {
-      encountersEl().appendChild(tmpl);
-    }
+    });
   }
 
-  function encountersEl() {
+  function encounterPromise(refreshRate) {
+    return new Promise(function(resolve) {
+      setTimeout(function() {
+        displayEncounter(self.journey.getEncounter());
+        setTimeout(resolve, EncounterDisplayer.FADE_TIME)
+      }, refreshRate);
+    });
+  }
+
+  function buildEncounterPromises() {
+    var promises = [];
+    for (var i = 0; i < EncounterDisplayer.MAX_ENCOUNTERS; i++) {
+      var refreshRate = EncounterDisplayer.REFRESH_RATE * i;
+      promises.push(encounterPromise(refreshRate));
+    }
+    var delayBeforeRefresh = new Promise(function(resolve) {
+      setTimeout(resolve, EncounterDisplayer.REFRESH_RATE * EncounterDisplayer.MAX_ENCOUNTERS);
+    })
+    promises.push(delayBeforeRefresh);
+    return promises;
+  }
+
+  function displayEncounter(myEncounter) {
+    var template = document.getElementById('encounter-template').content.cloneNode(true);
+    template.querySelector('.timestamp').innerText = myEncounter.timestamp;
+    template.querySelector('.result').innerText = myEncounter.result;
+    getEncountersEl().appendChild(template);
+  }
+
+  function getEncountersEl() {
     return document.getElementById('encounters')
   }
 
-  function removeEncounterEls(number) {
-    var promises = [];
-    for (var i = 0; i < number; i++) {
-      var p = new Promise(function(resolve) {
-        encountersEl().children[i].className += ' fade-out';
-        setTimeout(function() {
-          encountersEl().children[0].remove();
-          resolve();
-        }, EncounterDisplayer.FADE_TIME);
-      });
-      promises.push(p);
+  function removeEncounterEls() {
+    var total = getEncountersEl().children.length;
+    for (var i = 0; i < total; i++) {
+      getEncountersEl().children[0].remove();
     }
-    return Promise.all(promises);
   }
-}();
 
-var Encounter = function(timestamp, result) {
+  function fadeoutEncounterEls() {
+    for (var i = 0; i < getEncountersEl().children.length; i++) {
+      getEncountersEl().children[i].className += ' fade-out';
+    };
+    return new Promise(function(resolve) {
+      setTimeout(resolve, EncounterDisplayer.FADE_TIME);
+    });
+  }
+}
+
+function Encounter(timestamp, result) {
   this.timestamp = timestamp;
   this.result = result;
 };
 
-var Journey = function() {};
+function Journey() {
+  this.encounters = {};
+  this.activeEncounters = {};
+};
 Journey.TOTAL_SENTENCES = TOTAL_SENTENCES;
-Journey.prototype = function() {
+Journey.prototype.setActiveEncounters = function () {
   var self = this;
-  self.getEncounter = getEncounter;
-  return self;
+  return new Promise(function(resolve) {
+    self.activeEncounters = JSON.parse(JSON.stringify(self.encounters));
+    resolve();
+  });
+}
+Journey.prototype.getEncounter = function () {
+  var self = this;
+  var paragraph = [];
+  Object.keys(self.activeEncounters.categories).popRandom(Journey.TOTAL_SENTENCES).forEach(function(category) {
+    var sentences = self.activeEncounters.categories[category];
+    paragraph.push(sentences.popRandom(1));
+  });
+  return new Encounter(new Date(), paragraph.reduce(function(a,b) { return a + ' ' + b }, ''));
+}
+Journey.prototype.start = function() {
+  var self = this;
+  return setEncounters();
 
-  function getEncounter() {
+  function setEncounters() {
+    return getEncounters().then(function(encounters) {
+      self.encounters = encounters;
+    });
+  }
+
+  function getEncounters() {
     return new Promise(function(resolve) {
       var xmlhttp = new XMLHttpRequest();
       var url = './all_encounters.json';
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-          resolve(processEncounter(JSON.parse(xmlhttp.responseText)));
+          resolve(JSON.parse(xmlhttp.responseText));
         }
       };
       xmlhttp.open('GET', url, true);
       xmlhttp.send();
     });
   }
-
-  function processEncounter(allEncounters) {
-    var paragraph = [];
-    Object.keys(allEncounters.categories).popRandom(Journey.TOTAL_SENTENCES).forEach(function(category) {
-      var sentences = allEncounters.categories[category];
-      paragraph.push(sentences[Math.floor(Math.random() * sentences.length)]);
-    });
-    return new Encounter(new Date(), paragraph.reduce(function(a,b) { return a + ' ' + b }, ''));
-  }
-}();
+}
 
 Array.prototype.popRandom = function(total) {
   if (this.length < total) return [];
