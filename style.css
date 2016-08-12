@@ -6,7 +6,7 @@ body {
   color: #414330;
 }
 h1 {
-	font-family: 'FuturaW01-MediumCondens';
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin: 0px;
 	padding: 0;
 	line-height: 1em;
@@ -15,7 +15,7 @@ h1 {
 	color: #414330;
 }
 h2 {
-	font-family: 'FuturaW01-MediumCondens';
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin: 0px;
 	padding-bottom: 20px;
 	line-height: 1.5em;
