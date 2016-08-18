@@ -1,7 +1,7 @@
 body {
   text-align: center;
   padding: 10px 10px;
-  font-size:24px;
+  font-size:48px;
   line-height:1.25em;
   color: #414330;
 }
@@ -26,7 +26,7 @@ h2 {
 
 #encounters {
   display: inline-block;
-  width: 700px;
+  width: 1000px;
 }
 
 .encounter {
