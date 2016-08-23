@@ -131,8 +131,7 @@
       "GO TO IDLE LOOP.",
       "CHARLEY, COME IN HERE.",
       "PUTS OWN ADDRESS IN X AND X +1.",
-      "IF RESTART, DO NOT RESTORE CX, CX+1.",
-    
+      "IF RESTART, DO NOT RESTORE CX, CX+1."
       ]
   }
 }
