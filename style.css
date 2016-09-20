@@ -23,6 +23,16 @@ h2 {
 	font-weight: normal;
 	color: #990000;
 }
+#video_box{
+    float:left;
+}
+#video_overlays {
+position:absolute;
+float:left;
+    width:100%;
+    background-color:#000;
+    z-index:300000;
+}
 
 #encounters {
   display: inline-block;
