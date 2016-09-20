@@ -142,7 +142,7 @@
       "Use request, subject and message to build and send a standard.",
       "Array.prototype.popRandom.",
       "From an atmosphere user to admins.",
-      "Use the values in `allocation_source_snapshot` and possibly the `TASAPIDriver` to inform the user of more relevant details!"
+      "Use the values in `allocation_source_snapshot` and possibly the `TASAPIDriver` to inform the user of more relevant details!",
       "If restart, do not restore CX, CX+1."
       ]
   }
