@@ -25,6 +25,8 @@ h2 {
 }
 #video_box{
     float:left;
+    width:100%;
+    padding-top:10px;
 }
 #video_overlays {
 position:absolute;
