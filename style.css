@@ -4,6 +4,7 @@ body {
   font-size:32px;
   line-height:1.25em;
   color: #414330;
+  border-right: 35px, solid, white;
 }
 h1 {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
