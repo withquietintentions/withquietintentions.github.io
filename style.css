@@ -38,6 +38,7 @@ h2 {
 }
 
 #right_hide{
+	display: inline-block;
     width" 35px;
     height:370px;
     position: absolute;
