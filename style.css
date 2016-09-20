@@ -27,6 +27,7 @@ h2 {
     float:left;
     width:100%;
     padding-top:10px;
+    padding-left:10px;
     border: 35px solid red;
     z-index:-1;
 }
