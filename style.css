@@ -30,7 +30,6 @@ h2 {
 position:absolute;
 float:left;
     width:100%;
-    background-color:#000;
     z-index:-1;
 }
 
