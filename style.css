@@ -38,7 +38,7 @@ h2 {
 }
 #right_hide{
 	position:absolute;
-left:8000px;
+left:100%;
 top:0px;
 	width:25px;
 	height:300px;
