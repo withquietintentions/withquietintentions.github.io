@@ -25,9 +25,9 @@ h2 {
 }
 #video_box{
     float:left;
-    width:120%;
+    width:100%;
     padding-top:10px;
-    border-right: 35px, solid, red;
+    border: 35px, solid, red;
     z-index:-1;
 }
 #left_hide{
