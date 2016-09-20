@@ -126,12 +126,24 @@
       "The shaman seems to be all things to all people."
     ],
     "codeLanguage": [
-      "THE PURPOSE OF SELF-CHECK IS TO CHECK OUT VARIOUS PARTS OF THE COMPUTER AS OUTLINED BELOW IN THE OPTIONS.",
-      "THE FIRST IS SELF-CHECK WHICH RUNS AS A ZERO PRIORITY JOB WITH NO CORE SET.",
-      "GO TO IDLE LOOP.",
-      "CHARLEY, COME IN HERE.",
-      "PUTS OWN ADDRESS IN X AND X +1.",
-      "IF RESTART, DO NOT RESTORE CX, CX+1."
+      "The purpose of the self-check is to check out various parts of the computer as outlined below in the options.",
+      "The first is self-check whihc runs as a zero priority job with no core set.",
+      "Go to idle loop.",
+      "Charley, come in here.",
+      "Puts own address in X and X +1.",
+      "Show this help message.",
+      "Function EncounterDisplayer journey.",
+      "Self.journey.setActiveEncounters",
+      "Function encounterPromise",
+      "Journey.prototype.getEncounter.",
+      "Journey.prototype.start.",
+      "Promise.all.",
+      "Allocation_source_warnings.",
+      "Use request, subject and message to build and send a standard.",
+      "Array.prototype.popRandom.",
+      "From an atmosphere user to admins.",
+      "Use the values in `allocation_source_snapshot` and possibly the `TASAPIDriver` to inform the user of more relevant details!"
+      "If restart, do not restore CX, CX+1."
       ]
   }
 }
