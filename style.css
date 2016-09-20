@@ -28,15 +28,8 @@ h2 {
     width:100%;
     padding-top:10px;
     padding-left:10px;
-    border: 30px solid red;
+   /* border: 30px solid red;*/
     z-index:-1;
-}
-#left_hide{
-	position:absolute;
-	float:left;
-	width:35px;
-	height:370px;
-	background-color:white;
 }
 
 #video_overlays {
