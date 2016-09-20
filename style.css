@@ -29,6 +29,13 @@ h2 {
     padding-top:10px;
     z-index:-1;
 }
+#left_hide{
+	position:absolute;
+	float:left;
+	width:20px;
+	height:115px;
+	background-color:white;
+}
 #video_overlays {
 position:absolute;
 float:left;
