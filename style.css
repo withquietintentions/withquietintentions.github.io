@@ -33,7 +33,14 @@ h2 {
 	position:absolute;
 	float:left;
 	width:20px;
-	height:115px;
+	height:230px;
+	background-color:white;
+}
+#right_hide{
+	position:absolute;
+	float:right;
+	width:20px;
+	height:230px;
 	background-color:white;
 }
 #video_overlays {
