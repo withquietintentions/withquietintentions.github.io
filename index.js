@@ -1,6 +1,6 @@
 const MAX_ENCOUNTERS = 6;
 const REFRESH_RATE = 30000; //milliseconds
-const TOTAL_SENTENCES = 5;
+const TOTAL_SENTENCES = 3;
 const FADE_TIME = 3000;
 
 function EncounterDisplayer(journey) {
