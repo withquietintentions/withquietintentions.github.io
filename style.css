@@ -50,7 +50,7 @@ float:left;
   opacity: 1;
   margin-bottom: 20px;
 	margin-left: 150px;
-	transform: rotate(90deg);
+	/*transform: rotate(90deg);*/
 }
 
 .result {
