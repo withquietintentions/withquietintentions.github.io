@@ -42,7 +42,7 @@ float:left;
 #encounters {
   display: inline-block;
 	vertical-align:top
-  width: 100px;
+  width: 500px;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
