@@ -127,7 +127,7 @@
     ],
     "codeLanguage": [
       "The purpose of the self-check is to check out various parts of the computer as outlined below in the options.",
-      "The first is self-check whihc runs as a zero priority job with no core set.",
+      "The first is self-check which runs as a zero priority job with no core set.",
       "Go to idle loop.",
       "Charley, come in here.",
       "Puts own address in X and X +1.",
