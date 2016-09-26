@@ -50,6 +50,7 @@ float:left;
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
+	margin-left: 100px;
 }
 
 .result {
