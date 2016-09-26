@@ -34,12 +34,12 @@ h2 {
 	position:relative;
 }
 
-#video_overlays {
+/*#video_overlays {
 position:absolute;
 float:left;
     width:50%;
     z-index:1;
-}
+}*/
 
 #encounters {
   display:inline-block;
@@ -47,6 +47,8 @@ float:left;
 	width:600px;
 	height:600px;
 	position:absolute;
+	top:10px;
+	left: 10px;
 	/*-webkit-transform: rotate(90deg);*/
 	
 		 
