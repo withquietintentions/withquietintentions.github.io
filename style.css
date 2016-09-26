@@ -43,7 +43,7 @@ float:left;
   display: inline-block;
 	vertical-align:top;
 transform: rotate(90deg);
-	padding-top: 100px;
+	padding-top: 10px;
    /* -webkit-transform: rotate(90deg);*/
    
 }
@@ -51,7 +51,7 @@ transform: rotate(90deg);
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
-	/*margin-left: 100px; -not working */
+	margin-left: 100px; 
 }
 
 .result {
