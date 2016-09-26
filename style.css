@@ -37,7 +37,7 @@ position:absolute;
 #encounters {
   display:inline-block;
 	/*vertical-align:top;*/
-	width:600px;
+	width:800px;
 	height:800px;
 	-webkit-transform: rotate(90deg);
 	
