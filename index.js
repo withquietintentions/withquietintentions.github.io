@@ -1,4 +1,4 @@
-const MAX_ENCOUNTERS = 5;
+const MAX_ENCOUNTERS = 3; //only 3 fit on my exhibition monitor via Pi tho more would work on a reg computer
 const REFRESH_RATE = 20000; //milliseconds
 const TOTAL_SENTENCES = 5;
 const FADE_TIME = 3000;
