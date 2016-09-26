@@ -4,7 +4,8 @@ body {
   font-size:28px;
   line-height:1.25em;
   color: #414330;
-	transform: rotate(90deg);
+	-webkit-transform: rotate(20deg);
+	-webkit-transform: translate (50px,0px);
 }
 h1 {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
