@@ -45,7 +45,7 @@ float:left;
   display:inline-block;
 	width:600px;
 	height:600px;
-	/*-webkit-transform: rotate(90deg);*/
+	-webkit-transform: rotate(90deg);
 	
 		 
 }
