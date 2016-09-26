@@ -40,7 +40,7 @@ float:left;
 }
 
 #encounters {
-  
+  display:block 
 	/*vertical-align:top;*/
 	/*width: 50%;*/
 	/*padding-top: 10px;
