@@ -41,8 +41,7 @@ float:left;
 
 #encounters {
   display: inline-block;
-	position:absolute;
-	float:left;
+	vertical-align:top
   width: 50%;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
