@@ -43,7 +43,6 @@ float:left;
   
 	/*vertical-align:top;*/
 	/*width: 50%;*/
-transform: rotate(90deg);
 	/*padding-top: 10px;
    /* -webkit-transform: rotate(90deg);*/
    
@@ -53,7 +52,7 @@ transform: rotate(90deg);
   opacity: 1;
   margin-bottom: 20px;
 	margin-left: 150px;
-	
+	transform: rotate(90deg);
 }
 
 .result {
