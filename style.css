@@ -27,7 +27,7 @@ h2 {
 #video_box{
     float:left;
     width:100%;
-    padding-top:10px;/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
+    margin-top:40px;/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
     z-index:-1;
 position:absolute;
 }
