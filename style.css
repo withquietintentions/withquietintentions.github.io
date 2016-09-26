@@ -47,7 +47,7 @@ position:absolute;
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
-	margin-left:50px;
+	margin-left:-50px;
 	
 }
 
