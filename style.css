@@ -42,7 +42,8 @@ float:left;
 
 #encounters {
   display:inline-block; 
-	width:80%;
+	width:300px;
+	height:200px;
 		/* -webkit-transform: rotate(90deg);*/
    
 }
