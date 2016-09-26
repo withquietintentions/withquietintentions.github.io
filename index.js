@@ -1,4 +1,4 @@
-const MAX_ENCOUNTERS = 3;
+const MAX_ENCOUNTERS = 5;
 const REFRESH_RATE = 20000; //milliseconds
 const TOTAL_SENTENCES = 5;
 const FADE_TIME = 3000;
