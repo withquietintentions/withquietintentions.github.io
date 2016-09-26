@@ -29,17 +29,10 @@ h2 {
     width:100%;
     padding-top:-50px;
     padding-left:10px;
-   /* border: 30px solid red;*/
     z-index:-1;
-	position:absolute;
+position:absolute;
 }
 
-/*#video_overlays {
-position:absolute;
-float:left;
-    width:50%;
-    z-index:1;
-}*/
 
 #encounters {
   display:inline-block;
@@ -53,10 +46,8 @@ float:left;
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
-	margin-left:100px;
+	margin-left:160px;
 	
-	/*margin-left: 150px;
-	/*transform: rotate(90deg);*/
 }
 
 .result {
