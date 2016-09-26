@@ -4,6 +4,7 @@ body {
   font-size:28px;
   line-height:1.25em;
   color: #414330;
+	 -webkit-transform: rotate(90deg);
 	/*transform: rotate(90deg);*/
 }
 h1 {
@@ -44,7 +45,7 @@ float:left;
   display:inline-block; 
 	width:600px;
 	height:600px;
-		 -webkit-transform: rotate(90deg);
+		
    
 }
 
