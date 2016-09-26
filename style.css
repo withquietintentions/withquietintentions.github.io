@@ -38,7 +38,7 @@ position:absolute;
   display:inline-block;
 	/*vertical-align:top;*/
 	width:800px;
-	height:2000px;
+	height:1800px;
 	-webkit-transform: rotate(90deg);
 	
 		 
@@ -47,7 +47,7 @@ position:absolute;
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
-	margin-left:-50px;
+	margin-left:0px;
 	
 }
 
