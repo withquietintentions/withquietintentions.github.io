@@ -31,6 +31,7 @@ h2 {
     padding-left:10px;
    /* border: 30px solid red;*/
     z-index:-1;
+	position:relative;
 }
 
 #video_overlays {
@@ -41,13 +42,14 @@ float:left;
 }
 
 #encounters {
-  display:inline-block; 
+  display:inline-block;
+	position:absolute;
 	width:600px;
 	height:600px;
-	-webkit-transform: rotate(90deg);
-	-webkit-transform: translate (50px,0px);
-		
-   
+	position:absolute;
+	/*-webkit-transform: rotate(90deg);*/
+	
+		 
 }
 
 .encounter {
