@@ -41,9 +41,8 @@ float:left;
 
 #encounters {
   /*display: inline-block;*/
-	float:left;
 	/*vertical-align:top;*/
-	width: 50%;
+	/*width: 50%;*/
 transform: rotate(90deg);
 	/*padding-top: 10px;
    /* -webkit-transform: rotate(90deg);*/
@@ -53,6 +52,7 @@ transform: rotate(90deg);
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
+	margin-left: 150px;
 	
 }
 
