@@ -27,7 +27,7 @@ h2 {
 #video_box{
     float:left;
     width:100%;
-    margin-top:40px;/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
+    margin-top:100px;/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
     z-index:-1;
 position:absolute;
 }
@@ -45,8 +45,7 @@ position:absolute;
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
-	margin-left:0px;
-	
+
 }
 
 .result {
