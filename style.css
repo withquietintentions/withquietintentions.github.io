@@ -27,7 +27,7 @@ h2 {
 #video_box{
     float:left;
     width:100%;
-    padding-top:600px;
+    padding-top:10px;
     padding-left:0px;
     z-index:-1;
 position:absolute;
