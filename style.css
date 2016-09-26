@@ -1,7 +1,7 @@
 body {
   text-align: center;
   padding: 10px 10px;
-  font-size:28px;
+  font-size:24px;
   line-height:1.25em;
   color: #414330;
 	
@@ -27,23 +27,21 @@ h2 {
 #video_box{
     float:left;
     width:100%;
-    padding-top:10px;
-    padding-left:0px;
+    padding-top:10px;/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
     z-index:-1;
 position:absolute;
 }
 
-
+/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
 #encounters {
   display:inline-block;
-	/*vertical-align:top;*/
-	width:600px;
+	width:500px;
 	height:1200px;
 	-webkit-transform: rotate(90deg);
 	
 		 
 }
-
+/*Dont change these values, it looks odd on a web browser but works with my monitor for the exhibition*/
 .encounter {
   opacity: 1;
   margin-bottom: 20px;
