@@ -31,7 +31,7 @@ h2 {
     padding-left:10px;
    /* border: 30px solid red;*/
     z-index:-1;
-	position:relative;
+	position:absolute;
 }
 
 /*#video_overlays {
@@ -43,12 +43,8 @@ float:left;
 
 #encounters {
   display:inline-block;
-	position:absolute;
 	width:600px;
 	height:600px;
-	position:absolute;
-	top:10px;
-	left: 10px;
 	/*-webkit-transform: rotate(90deg);*/
 	
 		 
