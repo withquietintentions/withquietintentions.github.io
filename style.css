@@ -40,7 +40,8 @@ float:left;
 }
 
 #encounters {
-  display: inline-block;
+  /*display: inline-block;*/
+	float:left;
 	vertical-align:top;
 	/*width: 50%;*/
 transform: rotate(90deg);
