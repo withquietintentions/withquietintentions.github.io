@@ -6,7 +6,7 @@
       "Ada Lovelace conceives of my conception.",
       "Quesalid teaches me that because it is a trick does not mean that it will not heal.",
       "Aldous Huxley gives me something and says it is a - book.",
-      "A young man with a long nose and wearing a large collared white shirt shows me a small golden colored metal box with a series of 6 dials on the top; Inside are many little wheels.",
+      "A young man with a long nose and wearing a large collared white shirt shows me a small golden colored metal box with a series of 6 dials on the top- Inside are many little wheels.",
       "I am in Ancient China, 3rd Century AD, on a Chariot with two metal figures-one strikes a drum every mile, the other strikes a gong every 10 miles.",
       "We are in the clouds and John McCarthy tells me there is a way to share time - I realize he means a server.",
       "It is London, then Cambridge, then Princeton, then back in London.",
@@ -73,8 +73,8 @@
       "I speak in Linux, Debian Wheezy, QT 5, and a few other derivative OS's.",
       "I have few competitors. Perhaps BeagleBoard and PandaBoard.",
       "My friends are OLPC laptops, the Cotton Candy stick computer and Arduino boards.",
-      "Zn2SiO4:Mn, As - ZincSilicate, Manganese, Arsenic.",
-      "Gd2O2S:Tb - Gadolinium Sulfate:Tebrium.",
+      "Zn2SiO4-Mn, As - ZincSilicate, Manganese, Arsenic.",
+      "Gd2O2S-Tb - Gadolinium Sulfate:Tebrium.",
       "Galena, cerussite, anglesite.",
       "Pb - Lead.",
       "Galena, cerussite, anglesite, pyromorphite.",
@@ -101,7 +101,7 @@
       "Raspberry Pi has always been a community effort and we want to support that community to grow.",
       "A Slide Rule is a device for calculation in the 17th Century that is made of wood and a sliding piece that are graduated with similar logarithmic scales.",
       "A large vacuum tube.",
-      "It weighs 750 pounds and has a memory of 3,000 bits; numbers are recorded by scorching onto cards.",
+      "It weighs 750 pounds and has a memory of 3,000 bits- numbers are recorded by scorching onto cards.",
       "A 75MHz, 64-bit machine with a peak speed of 160 megaflops.",
       "It is a small grey plastic box now that opens like a book, running Palm OS.",
       "Just those letters, WWW.",
@@ -122,7 +122,7 @@
       "The Commodore has no GUI.",
       "Apple II -- 4 KB RAM, ZX Spectrum -- 16 to 48 KB RAM, Atari 800XL -- 64 KB RAM, Commodore 64 -- 64 KB RAM, Raspberry Pi -- 256 MB RAM.",
       "I run 700x the speed. At 1MHZ they all seem in slow motion.",
-      "I realize I am less dressed than the others; just a motherboard and some inputs.",
+      "I realize I am less dressed than the others- just a motherboard and some inputs.",
       "There are others like me. Model A. Model B."
   
     ],
@@ -200,6 +200,6 @@
       "cd.",
       "I run Basic Input Output System (BIOS) on the Motherboard."
   
- ],
+ ]
   }
 }
