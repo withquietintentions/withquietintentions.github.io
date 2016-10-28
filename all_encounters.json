@@ -200,6 +200,12 @@
       "sudo.",
       "reboot.",
       "cd.",
+      "All the letters of the alphabet, number from 0-9, and some punctuation marks have been replaced by dots and dashes.",
+      "The Public key is 1764. The private key is 36 and 49.",
+      "System open: Access Level <9>.",
+      "-l root.",
+      "ssh.",
+      "Pswrd IAcceptTheRisk.",
       "I run Basic Input Output System BIOS on the Motherboard."
  ]
   }
