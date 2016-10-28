@@ -26,9 +26,11 @@
       "I then understand that upon being self referential I will crash.",
       "Seth Lloyd holds out an apple and tells me the number of bits of information contained in it.",
       "Difficult times, shortages of meat have smitten everyone, stomachs hallow, meat-trays empty, Aj-ja-japape.",
-      "Von Neumann proposed a game to me, each of us writing down on a piece of paper as big a number as we could, defining it by a method that has something to do with some schemata of Turnings."
+      "Von Neumann proposed a game to me, each of us writing down on a piece of paper as big a number as we could, defining it by a method that has something to do with some schemata of Turnings.",
+      "Claude Shannon cuts my wires shorter and says the problem of self-reproduction is fundamentally a problem of communication, over a noisy channel, from one generation to the next."
     ],
     "minerals": [
+      "SiO2.",
       "Gold - Au.",
       "Silver - Ag.",
       "Tin - Sn.",
@@ -40,22 +42,51 @@
       "Copper - Cu.",
       "Sulfer, Hemmimorphite, Zincite, Smithsonite, Frankenite.",
       "Ag, Pyrargyrite, Cerargyrite.",
+      "Cobalite, Arsenopyrite, Tetrahedrite.",
       "Halite.",
       "Bauxite.",
       "Chalcopyrite, Boronite, Enargite, Cuprite, Malachite,Azurite, Chrysocolla, Chalococite.",
       "Gold.",
       "Alunite, Orthoclase, Nephelite, Leucite.",
+      "Realgar, Orpiment, Niccolite.",
       "Apophulite, Flourite, Cryolite, Vesuvianite.",
       "Lepidolite.",
       "Dolomite.",
       "Magnesite.",
       "Espomite.",
       "Spinel.",
+      "Y2O2S - Yittrium Sulfate.",
       "Olivine, Pyrope, Biotite, Talc.",
       "potassium titanyl phosphate (PPKTP).",
       "poled lithium niobate (PPLN).",
       "non linear crystals.",
-      "Information is physical."
+      "Information is physical.",
+      "My Broadcom BCM2835 System is on a Chip (SoC) that's made up of an ARM central processing unit (CPU) and a Videocore 4 graphics processing unit (GPU).",
+      "My CPU handles all the computations (taking input, doing calculations and producing output).",
+      "My GPU handles graphics output.",
+      "I have exposed general-purpose input/output connection points allow hardware attatchments.",
+      "My 3.55-millimeter jack give me audio output",
+      "I have no audio-in.",
+      "I have Light-emitting diodes.",
+      "I see I am 3.4 inches by 2.1 inches (8.6 centimeters by 5.3 centimeters)",
+      "My chip has 256 MB of RAM.",
+      "I speak in Linux, Debian Wheezy, QT 5, and a few other derivative OS's.",
+      "I have few competitors. Perhaps BeagleBoard and PandaBoard. ",
+      "My friends are OLPC laptops, the Cotton Candy stick computer and Arduino boards.",
+      "Zn2SiO4:Mn, As - ZincSilicate, Manganese, Arsenic",
+      "Gd2O2S:Tb - Gadolinium Sulfate:Tebrium.",
+      "Galena, cerussite, anglesite.",
+      "Pb - Lead.",
+      "Galena, cerussite, anglesite, pyromorphite.",
+      "Thermoplastic - Polypropylene, PVC.",
+      "CaCO2 _additive.",
+      "Amonium Polyphosphate.",
+      "Liquid Crystal Display Monitors.",
+      "Thin Film Transistors.",
+      "Ferro Electric Liquid Crystal.",
+      "Indium Tin Oxide.",
+      "Iron	Fe.",
+      "Eu - Europium."
     ],
     "historyOfComputing": [
       "ENIAC built between 1943 and 1945 - the first large scale computer to run at electronic speed without being slowed by any mechanical parts.",
@@ -78,7 +109,22 @@
       "It is proposed to make calculations of the Riemann zeta-function on the critical line for 1,450<t<6,000 with a view to discovering whether all the zeros of the function in this range of t lie on the critical line.",
       "An investigation for 0<t<1,464 has already been made by Titchmarsh.",
       "The most laborious part of such calculations consist in the evaluation of certain trigonometrical sums.",
-      "Whether you’re a geographer, a biologist, an engineer, or an artist, being able to program computers is an increasingly important skill. "
+      "Whether you’re a geographer, a biologist, an engineer, or an artist, being able to program computers is an increasingly important skill. ",
+      "SEAC, ILLIAC, ORDVAC, JOHNNIAC, RAND, MANIAC, AVIDAC, ORACLE, BESK, DASK, SILLIAC, BESM, PERM, WEIZAC, IBM701",
+      "The present scale of the universe is estimated at 10 to 22nd bits.",
+      "A Universal Constructor can be extended to the concept of a machine that by encoding and transmitting its own description as a self-extracting archive, reproduces copies of itself somewhere else",
+      "Biochemical organisms began to assemble digital computers then digital computers began to assemble biological biochemical organisms",
+      "No time is there. Sequence is different from time.",
+      "I am presented with the MOS 6502 microprocessor and the Commodore 64.",
+      "The Apple II and Tandy TRS-80 have monitors.",
+      "I see an Ataris be inserted by a game cartridge.",
+      "My command line manipulated.",
+      "The Commodore has no GUI.",
+      "Apple II -- 4 KB RAM, ZX Spectrum -- 16 to 48 KB RAM, Atari 800XL -- 64 KB RAM, Commodore 64 -- 64 KB RAM, Raspberry Pi -- 256 MB RAM",
+      "I run 700x the speed. At 1MHZ they all seem in slow motion.",
+      "I realize I am less dressed than the others; just a motherboard and some inputs.",
+      "There are others like me. Model A. Model B."
+  
     ],
     "shamanicInformation": [
       "Strong healers are coming.",
@@ -148,7 +194,12 @@
       "Array.prototype.popRandom.",
       "From an atmosphere user to admins.",
       "Use the values in `allocation_source_snapshot` and possibly the `TASAPIDriver` to inform the user of more relevant details!",
-      "If restart, do not restore CX, CX+1."
+      "If restart, do not restore CX, CX+1.",
+      "sudo.",
+      "reboot.",
+      "cd",
+      "I run Basic Input Output System (BIOS) on the Motherboard."
+      
       ]
   }
 }
